@@ -1,5 +1,12 @@
 import { PortfolioData } from "@/types/portfolio";
 
+/**
+ * Public Google Cloud Storage resume URL.
+ * Replace with your specific public GCS link if different.
+ */
+export const RESUME_URL =
+  "https://drive.google.com/file/d/1UOzxtJMxCTc2niLB4nXmlvyAopPVo9mJ/view?usp=sharing";
+
 export const portfolioData: PortfolioData = {
   personalInfo: {
     name: "Ishan Jarwal",
@@ -16,7 +23,7 @@ export const portfolioData: PortfolioData = {
     phone: "+91 9116080979",
     avatarUrl:
       "https://res.cloudinary.com/dsf4t9wmc/image/upload/v1793566827/Dramatic_Studio_Portrait_of_a_Bearded_Man_bz7h1u.png",
-    resumeUrl: "/resume.pdf",
+    resumeUrl: RESUME_URL,
     githubUrl: "https://github.com/ishanjarwal",
     linkedinUrl: "https://linkedin.com/in/ishanjarwal",
     twitterUrl: "https://x.com/ishanjarwal",
@@ -50,10 +57,10 @@ export const portfolioData: PortfolioData = {
     },
     {
       label: "Resume",
-      href: "/resume.pdf",
+      href: RESUME_URL,
       iconName: "FileText",
       external: true,
-      description: "Curriculum Vitae (PDF)",
+      description: "Resume (PDF)",
     },
     {
       label: "GitHub",

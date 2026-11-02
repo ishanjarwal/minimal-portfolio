@@ -85,11 +85,10 @@ export function Header() {
 
             <a
               href={personalInfo.resumeUrl}
-              download="Ishan_Jarwal_Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1 text-blue-600 dark:text-blue-400 underline hover:text-blue-800 dark:hover:text-blue-300 font-bold text-xs whitespace-nowrap shrink-0"
-              title="Download Resume (PDF)"
+              title="View Resume (PDF)"
             >
               <FileText className="size-3 shrink-0" />
               <span>Resume.pdf</span>
@@ -103,16 +102,16 @@ export function Header() {
 
         {/* Medium and Mobile Navigation Trigger & Theme Toggle */}
         <div className="flex items-center gap-2 lg:hidden shrink-0">
-          {/* Quick CV link visible on tablet too */}
+          {/* Quick Resume link visible on tablet too */}
           <a
             href={personalInfo.resumeUrl}
-            download="Ishan_Jarwal_Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="hidden sm:inline-flex items-center gap-1 text-blue-600 dark:text-blue-400 underline hover:text-blue-800 dark:hover:text-blue-300 text-xs font-mono font-bold whitespace-nowrap shrink-0 mr-1"
+            title="View Resume (PDF)"
           >
             <FileText className="size-3 shrink-0" />
-            <span>[CV.pdf]</span>
+            <span>[Resume.pdf]</span>
           </a>
 
           <ThemeToggle />
@@ -169,13 +168,13 @@ export function Header() {
               </a>
               <a
                 href={personalInfo.resumeUrl}
-                download="Ishan_Jarwal_Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-1 py-1 px-1 border border-border text-center text-blue-600 dark:text-blue-400 underline text-[11px] whitespace-nowrap"
+                title="View Resume (PDF)"
               >
                 <FileText className="size-3 shrink-0" />
-                <span>CV.pdf</span>
+                <span>Resume.pdf</span>
               </a>
             </div>
           </div>
