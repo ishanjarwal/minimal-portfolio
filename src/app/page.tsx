@@ -6,6 +6,7 @@ import { HeroSection } from "@/components/sections/hero";
 import { SkillsSection } from "@/components/sections/skills";
 import { ProjectsSection } from "@/components/sections/projects";
 import { EducationSection } from "@/components/sections/education";
+import { CertificationsSection } from "@/components/sections/certifications";
 // import { ExperienceSection } from "@/components/sections/experience"; // Temporarily disabled
 import { ContactSection } from "@/components/sections/contact";
 import { HorizontalSeparator } from "@/components/markdown-elements";
@@ -54,6 +55,11 @@ export default function HomePage() {
 
             {/* Education Section */}
             <EducationSection />
+
+            <HorizontalSeparator />
+
+            {/* Certifications Section */}
+            <CertificationsSection />
 
             <HorizontalSeparator />
 

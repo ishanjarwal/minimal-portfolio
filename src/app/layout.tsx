@@ -118,7 +118,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning className={`${geistMono.variable} font-mono`}>
+    <html
+      lang="en"
+      suppressHydrationWarning
+      className={`${geistMono.variable} font-mono`}
+    >
       <head>
         <StructuredData />
       </head>
@@ -126,7 +130,11 @@ export default function RootLayout({
         suppressHydrationWarning
         className="min-h-screen bg-background text-foreground flex flex-col font-mono text-[14px] leading-relaxed"
       >
-        <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="light"
+          enableSystem={false}
+        >
           {children}
           <Toaster />
         </ThemeProvider>

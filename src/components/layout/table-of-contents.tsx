@@ -19,8 +19,9 @@ export const TOC_ITEMS: TocItem[] = [
   { id: "about", label: "About Me", number: "1" },
   { id: "skills", label: "Core Skills & Stack", number: "2" },
   { id: "projects", label: "Featured Projects", number: "3" },
-  { id: "education", label: "Education & Certifications", number: "4" },
-  { id: "contact", label: "Get in Touch", number: "5" },
+  { id: "education", label: "Education", number: "4" },
+  { id: "certifications", label: "Certifications", number: "5" },
+  { id: "contact", label: "Get in Touch", number: "6" },
 ];
 
 interface TableOfContentsProps {
