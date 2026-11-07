@@ -28,6 +28,7 @@ export const portfolioData: PortfolioData = {
     linkedinUrl: "https://linkedin.com/in/ishanjarwal",
     twitterUrl: "https://x.com/ishanjarwal",
     leetcodeUrl: "https://leetcode.com/u/ishanjarwal",
+    blogUrl: "https://blog.ishanjarwal.com",
   },
 
   navigation: [
@@ -35,12 +36,27 @@ export const portfolioData: PortfolioData = {
     { id: "skills", label: "Skills", href: "#skills", shortcut: "02" },
     { id: "projects", label: "Projects", href: "#projects", shortcut: "03" },
     { id: "education", label: "Education", href: "#education", shortcut: "04" },
+    { id: "certifications", label: "Certifications", href: "#certifications", shortcut: "05" },
+    {
+      id: "blog",
+      label: "Blog",
+      href: "https://blog.ishanjarwal.com",
+      shortcut: "06",
+      external: true,
+    },
     // Temporarily commented out until work experience is added
-    // { id: "experience", label: "Experience", href: "#experience", shortcut: "04" },
-    { id: "contact", label: "Contact", href: "#contact", shortcut: "05" },
+    // { id: "experience", label: "Experience", href: "#experience", shortcut: "07" },
+    { id: "contact", label: "Contact", href: "#contact", shortcut: "07" },
   ],
 
   quickLinks: [
+    {
+      label: "Blog",
+      href: "https://blog.ishanjarwal.com",
+      iconName: "ExternalLink",
+      external: true,
+      description: "Technical blog & engineering essays",
+    },
     {
       label: "Email",
       href: "mailto:ishucodes@gmail.com",
@@ -279,7 +295,7 @@ export const portfolioData: PortfolioData = {
     {
       id: "jecrc-btech",
       institution: "JECRC University",
-      degree: "Bachelor of Technology (B.Tech)",
+      degree: "B.Tech",
       fieldOfStudy: "Computer Science & Engineering",
       duration: "2023 — 2027",
       startYear: "2023",
@@ -293,11 +309,11 @@ export const portfolioData: PortfolioData = {
         "Operating Systems",
         "System Design",
       ],
-      achievements: [
-        "Maintained top-tier academic standing with a cumulative GPA of 9.3 in Computer Science Engineering.",
-        "Active competitive programmer with strong algorithmic foundations in C++ across LeetCode.",
-        "Architected production-ready AI-native systems and software platforms leveraging modern web technologies.",
-      ],
+      // achievements: [
+      //   "Maintained top-tier academic standing with a cumulative GPA of 9.3 in Computer Science Engineering.",
+      //   "Active competitive programmer with strong algorithmic foundations in C++ across LeetCode.",
+      //   "Architected production-ready AI-native systems and software platforms leveraging modern web technologies.",
+      // ],
     },
   ],
 

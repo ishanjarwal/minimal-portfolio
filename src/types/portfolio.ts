@@ -15,6 +15,7 @@ export interface PersonalInfo {
   linkedinUrl: string;
   twitterUrl: string;
   leetcodeUrl: string;
+  blogUrl: string;
 }
 
 export interface SkillCategory {
@@ -88,6 +89,7 @@ export interface NavItem {
   label: string;
   href: string;
   shortcut?: string;
+  external?: boolean;
 }
 
 export interface QuickLink {
@@ -105,6 +107,6 @@ export interface PortfolioData {
   skills: SkillCategory[];
   projects: Project[];
   education: EducationEntry[];
-  certifications?: CertificationEntry[];
+  certifications: CertificationEntry[];
   experience: ExperienceEntry[];
 }

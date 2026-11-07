@@ -12,6 +12,7 @@ import {
   TwitterIcon,
   Copy,
   Check,
+  ExternalLink,
 } from "@/components/icons";
 
 export function ContactSection() {
@@ -118,6 +119,20 @@ export function ContactSection() {
         </div>
 
         <ul className="space-y-2 text-xs font-mono pl-1">
+          <li className="flex items-center gap-2 flex-wrap sm:flex-nowrap">
+            <span className="text-muted-foreground font-bold select-none shrink-0">*</span>
+            <ExternalLink className="size-3.5 text-muted-foreground shrink-0" />
+            <span className="text-muted-foreground shrink-0 whitespace-nowrap">Blog:</span>
+            <a
+              href={personalInfo.blogUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-600 dark:text-blue-400 underline hover:text-blue-800 dark:hover:text-blue-300 font-semibold whitespace-nowrap"
+            >
+              blog.ishanjarwal.com &rarr;
+            </a>
+          </li>
+
           <li className="flex items-center gap-2 flex-wrap sm:flex-nowrap">
             <span className="text-muted-foreground font-bold select-none shrink-0">*</span>
             <GithubIcon className="size-3.5 text-muted-foreground shrink-0" />

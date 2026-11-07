@@ -4,7 +4,7 @@ import * as React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { portfolioData } from "@/data/portfolio";
-import { Mail, Phone, FileText, Menu, X } from "@/components/icons";
+import { Mail, Phone, FileText, Menu, X, ExternalLink } from "@/components/icons";
 import { ThemeToggle } from "./theme-toggle";
 
 export function Header() {
@@ -47,16 +47,18 @@ export function Header() {
         </Link>
 
         {/* Right Side: Desktop Nav with Classic Blue Links */}
-        <div className="hidden lg:flex items-center gap-3 text-xs font-mono shrink-0 whitespace-nowrap">
-          <nav className="flex items-center gap-1.5 shrink-0 whitespace-nowrap">
+        <div className="hidden lg:flex items-center gap-2 xl:gap-3 text-xs font-mono shrink-0 whitespace-nowrap">
+          <nav className="flex items-center gap-1 xl:gap-1.5 shrink-0 whitespace-nowrap">
             {navigation.map((item) => (
               <a
                 key={item.id}
                 href={item.href}
                 onClick={(e) => handleNavClick(e, item.href)}
+                target={item.external ? "_blank" : undefined}
+                rel={item.external ? "noopener noreferrer" : undefined}
                 className="text-blue-600 dark:text-blue-400 underline hover:text-blue-800 dark:hover:text-blue-300 py-1 px-1 transition-colors whitespace-nowrap"
               >
-                [{item.label}]
+                [{item.label}{item.external ? " ↗" : ""}]
               </a>
             ))}
           </nav>
@@ -71,7 +73,7 @@ export function Header() {
               title={`Email: ${personalInfo.email}`}
             >
               <Mail className="size-3 shrink-0" />
-              <span>Email</span>
+              <span className="hidden xl:inline">Email</span>
             </a>
 
             <a
@@ -80,7 +82,7 @@ export function Header() {
               title={`Call: ${personalInfo.phone}`}
             >
               <Phone className="size-3 shrink-0" />
-              <span>Call</span>
+              <span className="hidden xl:inline">Call</span>
             </a>
 
             <a
@@ -102,6 +104,17 @@ export function Header() {
 
         {/* Medium and Mobile Navigation Trigger & Theme Toggle */}
         <div className="flex items-center gap-2 lg:hidden shrink-0">
+          {/* Quick Blog link visible on mobile/tablet */}
+          <a
+            href={personalInfo.blogUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1 text-blue-600 dark:text-blue-400 underline hover:text-blue-800 dark:hover:text-blue-300 text-xs font-mono font-bold whitespace-nowrap shrink-0 mr-1"
+            title="Visit Blog"
+          >
+            <span>[Blog ↗]</span>
+          </a>
+
           {/* Quick Resume link visible on tablet too */}
           <a
             href={personalInfo.resumeUrl}
@@ -139,19 +152,26 @@ export function Header() {
                 key={item.id}
                 href={item.href}
                 onClick={(e) => handleNavClick(e, item.href)}
+                target={item.external ? "_blank" : undefined}
+                rel={item.external ? "noopener noreferrer" : undefined}
                 className="flex items-center justify-between py-1.5 px-2 border border-border bg-muted/40 text-blue-600 dark:text-blue-400 underline whitespace-nowrap"
               >
-                <span>[{item.label}]</span>
-                <span className="text-muted-foreground text-[10px] no-underline">#{item.id}</span>
+                <span className="flex items-center gap-1.5">
+                  [{item.label}]
+                  {item.external && <ExternalLink className="size-3" />}
+                </span>
+                <span className="text-muted-foreground text-[10px] no-underline">
+                  {item.external ? "blog.ishanjarwal.com" : `#${item.id}`}
+                </span>
               </a>
             ))}
           </nav>
 
           <div className="border-t border-border mt-3 pt-3">
             <div className="text-[10px] text-muted-foreground mb-2 select-none uppercase tracking-wider">
-              {"// Quick Contact Links"}
+              {"// Quick Links"}
             </div>
-            <div className="grid grid-cols-3 gap-2">
+            <div className="grid grid-cols-2 gap-2">
               <a
                 href={`mailto:${personalInfo.email}`}
                 className="flex items-center justify-center gap-1 py-1 px-1 border border-border text-center text-blue-600 dark:text-blue-400 underline text-[11px] whitespace-nowrap"
@@ -175,6 +195,16 @@ export function Header() {
               >
                 <FileText className="size-3 shrink-0" />
                 <span>Resume.pdf</span>
+              </a>
+              <a
+                href={personalInfo.blogUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-1 py-1 px-1 border border-border text-center text-blue-600 dark:text-blue-400 underline text-[11px] whitespace-nowrap"
+                title="Visit Blog"
+              >
+                <ExternalLink className="size-3 shrink-0" />
+                <span>Blog ↗</span>
               </a>
             </div>
           </div>

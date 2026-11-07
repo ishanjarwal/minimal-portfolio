@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import { portfolioData } from "@/data/portfolio";
-import { GithubIcon, LinkedinIcon } from "@/components/icons";
+import { GithubIcon, LinkedinIcon, ExternalLink } from "@/components/icons";
 
 export function Footer() {
   const { personalInfo } = portfolioData;
@@ -26,6 +26,16 @@ export function Footer() {
           </div>
 
           <div className="w-full sm:w-auto grid grid-cols-2 gap-x-4 gap-y-2 sm:flex sm:items-center sm:gap-3 text-xs shrink-0">
+            <a
+              href={personalInfo.blogUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1 text-blue-600 dark:text-blue-400 underline hover:text-blue-800 dark:hover:text-blue-300 font-semibold whitespace-nowrap shrink-0"
+            >
+              <ExternalLink className="size-3.5 shrink-0" />
+              <span>[Blog]</span>
+            </a>
+            <span className="hidden sm:inline text-border shrink-0 select-none">|</span>
             <a
               href={personalInfo.githubUrl}
               target="_blank"

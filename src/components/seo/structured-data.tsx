@@ -44,6 +44,7 @@ export function StructuredData() {
       url: cert.credentialUrl,
     })),
     sameAs: [
+      personalInfo.blogUrl,
       personalInfo.githubUrl,
       personalInfo.linkedinUrl,
       personalInfo.twitterUrl,

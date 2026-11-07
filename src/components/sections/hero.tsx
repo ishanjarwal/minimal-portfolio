@@ -42,6 +42,15 @@ export function HeroSection() {
           <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-xs font-mono">
             <span className="text-muted-foreground select-none font-bold whitespace-nowrap">Links:</span>
             <a
+              href={personalInfo.blogUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-600 dark:text-blue-400 underline hover:text-blue-800 dark:hover:text-blue-300 font-semibold whitespace-nowrap"
+            >
+              Blog
+            </a>
+            <span className="text-border select-none">&bull;</span>
+            <a
               href={personalInfo.githubUrl}
               target="_blank"
               rel="noopener noreferrer"
