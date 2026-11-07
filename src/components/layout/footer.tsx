@@ -17,7 +17,7 @@ export function Footer() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6">
         <div className="border-t-2 border-border pt-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-muted-foreground">
           <div className="space-y-1">
-            <p className="text-foreground font-semibold whitespace-nowrap">
+            <p className="text-foreground font-semibold sm:whitespace-nowrap">
               &copy; 2026 {personalInfo.name}. All rights reserved.
             </p>
             <p className="text-[11px] text-muted-foreground">
@@ -25,7 +25,7 @@ export function Footer() {
             </p>
           </div>
 
-          <div className="flex items-center gap-3 text-xs shrink-0 whitespace-nowrap">
+          <div className="w-full sm:w-auto grid grid-cols-2 gap-x-4 gap-y-2 sm:flex sm:items-center sm:gap-3 text-xs shrink-0">
             <a
               href={personalInfo.githubUrl}
               target="_blank"
@@ -35,7 +35,7 @@ export function Footer() {
               <GithubIcon className="size-3.5 shrink-0" />
               <span>[GitHub]</span>
             </a>
-            <span className="text-border shrink-0 select-none">|</span>
+            <span className="hidden sm:inline text-border shrink-0 select-none">|</span>
             <a
               href={personalInfo.linkedinUrl}
               target="_blank"
@@ -45,7 +45,7 @@ export function Footer() {
               <LinkedinIcon className="size-3.5 shrink-0" />
               <span>[LinkedIn]</span>
             </a>
-            <span className="text-border shrink-0 select-none">|</span>
+            <span className="hidden sm:inline text-border shrink-0 select-none">|</span>
             <a
               href="#top"
               onClick={scrollToTop}
